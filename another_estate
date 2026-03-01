@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Homes Lagos | Premium Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B1C2D',
+                        accent: '#C6A75E'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .modal-open { overflow: hidden; }
+    </style>
+</head>
+<body class="text-primary bg-white">
+
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-accent">
+                    <i data-lucide="home"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Prestige Homes <span class="text-accent">Lagos</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#" class="hover:text-accent transition">Home</a>
+                <a href="#listings" class="hover:text-accent transition">Listings</a>
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#booking" class="bg-accent text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition shadow-lg shadow-accent/20">Book Inspection</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block px-4 py-1.5 bg-accent/10 text-accent rounded-full text-sm font-bold mb-6 uppercase tracking-widest">Luxury Living</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-primary">Find Verified Properties in <span class="text-accent">Lagos</span></h1>
+                <p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">Luxury apartments, duplexes & commercial spaces in Lekki, Ikeja & VI. Hand-picked for the 1%.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#listings" class="px-8 py-4 bg-primary text-white rounded-xl font-bold text-center hover:bg-slate-800 transition">View Listings</a>
+                    <a href="#booking" class="px-8 py-4 border-2 border-accent text-accent rounded-xl font-bold text-center hover:bg-accent hover:text-white transition">Book Inspection</a>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop" alt="Modern Mansion" class="rounded-3xl shadow-2xl border-b-8 border-accent aspect-[4/3] object-cover">
+                <a href="#" class="absolute -bottom-6 -right-6 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition"><i data-lucide="message-circle" class="w-8 h-8"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-accent"></i><span>120+ Properties Sold</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="users" class="text-accent"></i><span>85+ Happy Clients</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="award" class="text-accent"></i><span>10+ Years Experience</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="headphones" class="text-accent"></i><span>24/7 Client Support</span></div>
+        </div>
+    </section>
+
+    <section id="listings" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-3xl font-bold mb-2">Featured Properties</h2>
+                <div class="w-20 h-1 bg-accent rounded-full"></div>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-primary/80 backdrop-blur text-white px-3 py-1 rounded text-xs font-bold uppercase">New Listing</span>
+                </div>
+                <div class="p-6">
+                    <p class="text-accent font-bold text-xl mb-1">₦120,000,000</p>
+                    <h3 class="font-bold text-lg mb-4">4 Bedroom Detached Duplex</h3>
+                    <button onclick="toggleModal('property-modal')" class="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                        View Full Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <p class="text-accent font-bold text-xl mb-1">₦85,000,000</p>
+                    <h3 class="font-bold text-lg mb-4">Luxury 3 Bedroom Apartment</h3>
+                    <button onclick="toggleModal('property-modal')" class="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                        View Full Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop"
+     class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+     alt="Luxury Smart Villa">
+                </div>
+                <div class="p-6">
+                    <p class="text-accent font-bold text-xl mb-1">₦250,000,000</p>
+                    <h3 class="font-bold text-lg mb-4">5 Bedroom Smart Villa</h3>
+                    <button onclick="toggleModal('property-modal')" class="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                        View Full Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="property-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-primary/40 backdrop-blur-sm p-4 md:p-8">
+        <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-3xl overflow-y-auto no-scrollbar relative shadow-2xl">
+            <button onclick="toggleModal('property-modal')" class="absolute top-6 right-6 z-10 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-slate-100 hover:rotate-90 transition duration-300">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="grid md:grid-cols-12 gap-0">
+                <div class="md:col-span-8 p-6 md:p-10">
+                    <div class="mb-10">
+                        <div class="rounded-2xl overflow-hidden mb-4 h-[400px] relative">
+                            <img id="main-gallery" src="https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <button class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg font-bold text-sm shadow-sm flex items-center gap-2">
+                                <i data-lucide="maximize" class="w-4 h-4"></i> View Full Screen
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-4 gap-4">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop" class="rounded-xl h-24 w-full object-cover cursor-pointer hover:opacity-80 border-2 border-accent">
+                            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2070&auto=format&fit=crop" class="rounded-xl h-24 w-full object-cover cursor-pointer hover:opacity-80">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop" class="rounded-xl h-24 w-full object-cover cursor-pointer hover:opacity-80">
+                            <div class="relative rounded-xl overflow-hidden h-24 cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6199f7d009?q=80&w=2070&auto=format&fit=crop" class="h-full w-full object-cover blur-[2px]">
+                                <div class="absolute inset-0 bg-primary/40 flex items-center justify-center text-white font-bold">+12</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 border-y border-slate-100 py-8">
+                        <div class="text-center">
+                            <i data-lucide="bed-single" class="mx-auto mb-2 text-accent"></i>
+                            <p class="text-xs text-slate-400 uppercase font-bold">Bedrooms</p>
+                            <p class="font-bold">5 Beds</p>
+                        </div>
+                        <div class="text-center">
+                            <i data-lucide="bath" class="mx-auto mb-2 text-accent"></i>
+                            <p class="text-xs text-slate-400 uppercase font-bold">Bathrooms</p>
+                            <p class="font-bold">6 Baths</p>
+                        </div>
+                        <div class="text-center">
+                            <i data-lucide="car" class="mx-auto mb-2 text-accent"></i>
+                            <p class="text-xs text-slate-400 uppercase font-bold">Parking</p>
+                            <p class="font-bold">3 Spaces</p>
+                        </div>
+                        <div class="text-center">
+                            <i data-lucide="ruler" class="mx-auto mb-2 text-accent"></i>
+                            <p class="text-xs text-slate-400 uppercase font-bold">Total Area</p>
+                            <p class="font-bold">450 sqm</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h4 class="text-2xl font-bold mb-4">Description</h4>
+                        <p class="text-slate-600 leading-relaxed text-lg">
+                            A meticulously designed smart villa located in the heart of Ikoyi, featuring premium Italian marble flooring, floor-to-ceiling glass windows, and integrated smart home automation systems. This property offers a lifestyle of unparalleled luxury and security.
+                        </p>
+                    </div>
+
+                    <div class="mb-10">
+                        <h4 class="text-2xl font-bold mb-6">Premium Amenities</h4>
+                        <div class="grid grid-cols-2 gap-y-4">
+                            <div class="flex items-center gap-3 font-medium"><i data-lucide="check-circle" class="text-accent w-5 h-5"></i> Infinity Swimming Pool</div>
+                            <div class="flex items-center gap-3 font-medium"><i data-lucide="check-circle" class="text-accent w-5 h-5"></i> 24/7 Smart Security</div>
+                            <div class="flex items-center gap-3 font-medium"><i data-lucide="check-circle" class="text-accent w-5 h-5"></i> Private Rooftop Terrace</div>
+                            <div class="flex items-center gap-3 font-medium"><i data-lucide="check-circle" class="text-accent w-5 h-5"></i> Fully Fitted Chef's Kitchen</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold">Prime Location</h5>
+                            <p class="text-slate-500">Located in Ikoyi, 5 minutes from Banana Island.</p>
+                        </div>
+                        <button class="bg-white border border-slate-200 px-4 py-2 rounded-lg font-bold flex items-center gap-2">
+                            <i data-lucide="map" class="w-4 h-4 text-accent"></i> View Map
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 bg-slate-50 p-6 md:p-10 border-l border-slate-100">
+                    <div class="sticky top-10">
+                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                            <p class="text-slate-400 font-bold text-xs uppercase mb-1">Asking Price</p>
+                            <h3 class="text-3xl font-extrabold text-primary mb-8 tracking-tight">₦250,000,000</h3>
+                            
+                            <div class="flex items-center gap-4 mb-8 pt-6 border-t border-slate-50">
+                                <img src="https://i.pravatar.cc/100?u=agency" class="w-14 h-14 rounded-full border-2 border-accent">
+                                <div>
+                                    <p class="font-bold">Segun Arinze</p>
+                                    <p class="text-xs text-slate-400 font-medium tracking-wide">Premium Agent</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <button class="w-full py-4 bg-primary text-white rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-slate-800 transition shadow-lg shadow-slate-200">
+                                    <i data-lucide="phone" class="w-5 h-5 text-accent"></i> Call Agent
+                                </button>
+                                <button class="w-full py-4 bg-[#25D366] text-white rounded-xl font-bold flex items-center justify-center gap-3 hover:opacity-90 transition">
+                                    <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Chat
+                                </button>
+                                <button onclick="toggleModal('property-modal')" class="w-full py-4 border-2 border-primary text-primary rounded-xl font-bold hover:bg-primary hover:text-white transition uppercase text-xs tracking-widest">
+                                    Book Inspection
+                                </button>
+                                <button class="w-full flex items-center justify-center gap-2 text-accent font-bold text-sm py-2 group">
+                                    <i data-lucide="video" class="w-4 h-4 group-hover:scale-125 transition"></i> Take Virtual Tour
+                                </button>
+                            </div>
+
+                            <p class="text-[10px] text-center text-slate-400 mt-6 leading-relaxed">
+                                Ref ID: PHL-SMT-450. By booking, you agree to our terms of service and legal verification protocols.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2070&auto=format&fit=crop" 
+     class="rounded-3xl shadow-2xl"
+     alt="Luxury Interior">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Why Work With Us?</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4"><div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="file-text" class="text-accent"></i></div><div><h4 class="font-bold text-lg">Verified property documents</h4><p class="text-slate-500">Every C of O is vetted by our legal team.</p></div></div>
+                    <div class="flex gap-4"><div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="calendar" class="text-accent"></i></div><div><h4 class="font-bold text-lg">Fast inspection scheduling</h4><p class="text-slate-500">See your future home within 24 hours.</p></div></div>
+                    <div class="flex gap-4"><div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i data-lucide="shield-check" class="text-accent"></i></div><div><h4 class="font-bold text-lg">Transparent pricing</h4><p class="text-slate-500">Direct-to-owner pricing. No hidden agent markups.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-24 bg-primary text-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl text-primary border-t-8 border-accent">
+                <h2 class="text-3xl font-bold text-center mb-10">Schedule an Inspection</h2>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Full Name" class="p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-accent border border-slate-100">
+                    <input type="tel" placeholder="Phone Number" class="p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-accent border border-slate-100">
+                    <select class="p-4 bg-slate-50 rounded-xl md:col-span-2 outline-none border border-slate-100"><option>Select Property</option><option>Lekki Duplexes</option><option>VI Apartments</option></select>
+                    <input type="date" class="p-4 bg-slate-50 rounded-xl md:col-span-2 outline-none border border-slate-100">
+                    <button class="md:col-span-2 py-4 bg-accent text-white font-bold rounded-xl hover:scale-[1.02] transition">Book Inspection Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-400 text-sm">&copy; 2026 Prestige Homes Lagos. Built for High-Performance Real Estate Sales.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.toggle('hidden');
+            document.body.classList.toggle('modal-open');
+        }
+
+        // Close modal when clicking outside the content
+        window.onclick = function(event) {
+            const modal = document.getElementById('property-modal');
+            if (event.target == modal) {
+                toggleModal('property-modal');
+            }
+        }
+    </script>
+</body>
+</html>
